@@ -1,10 +1,8 @@
 import express from 'express';
-
-import routes from './taskRoutes.js';
+import taskRoutes from './taskRoutes';
 
 const router = express.Router();
 
-router.use('/tasks',routes);
+router.use('/tasks', taskRoutes);
 
 export default router;
-

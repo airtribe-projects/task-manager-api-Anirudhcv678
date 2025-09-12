@@ -1,6 +1,6 @@
 const tap = require("tap");
 const supertest = require("supertest");
-const app = require("../app");
+const app = require("../dist/app").default;
 const server = supertest(app);
 
 tap.test("POST /tasks", async (t) => {
