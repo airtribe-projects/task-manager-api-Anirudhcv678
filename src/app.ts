@@ -1,5 +1,6 @@
 import express from 'express';
 import routes from './routes';
+import { ApiResponse } from './types/Task';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,12 +15,22 @@ app.use('/', routes);
 // Error handling middleware
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   console.error(err.stack);
-  res.status(500).json({ error: 'Something went wrong!' });
+  const response: ApiResponse = {
+    success: false,
+    status: 500,
+    message: 'Something went wrong!'
+  };
+  res.status(500).json(response);
 });
 
 // 404 handler
 app.use('*', (req: express.Request, res: express.Response) => {
-  res.status(404).json({ error: 'Route not found' });
+  const response: ApiResponse = {
+    success: false,
+    status: 404,
+    message: 'Route not found'
+  };
+  res.status(404).json(response);
 });
 
 // Start server only if this file is run directly
