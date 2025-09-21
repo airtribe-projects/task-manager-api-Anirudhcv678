@@ -2,14 +2,6 @@
 
 A RESTful API for managing tasks, built with Node.js, Express, and TypeScript.
 
-## Features
-
-- **TypeScript**: Full type safety and modern JavaScript features
-- **RESTful API**: Complete CRUD operations for tasks
-- **Express.js**: Fast, unopinionated web framework
-- **Strict Type Checking**: Comprehensive TypeScript configuration
-- **Testing**: Automated tests with tap and supertest
-
 ## Project Structure
 
 ```
