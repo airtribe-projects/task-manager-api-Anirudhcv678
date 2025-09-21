@@ -160,7 +160,7 @@ curl -X GET "http://localhost:3000/tasks/priority/high"
 
 **Description:** Retrieve a specific task by its ID.
 
-**Path Parameters:**
+** Path Parameters:**
 - `id` (number, required): Task ID
 
 **Example Request:**
